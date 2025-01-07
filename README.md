@@ -1,49 +1,51 @@
 # samsung-riscv
 this program is based on RISC-V architecture and uses open source tools to teach people about VLSI chipdesign and RISC-V<br>
 
-<h3>basic detail</h3><br>
-<b>name:</b>yashas.B.R<br>
-<b>college:</b>SJB Institue Of Technology<br>
-<b>email id:</b> <a href = "yashasksy@gmail.com"> yashasksy@gmail.com</a><br>
+**Name:** Yashas.B.R <br>
+**College:** SJB Institue Of Technology <br>
+**Email ID:** yashasksy@gmail.com <br>
+**GitHub Profile:** [BRUTAL018](https://github.com/BRUTAL018) <br>  
+
+----------------------------------------------------------------------------------------------------------------
 <details>
 <summary><b>Task 1:</b> Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler</summary>
 
 ### C Language based LAB
 We have to follow the given steps to compile any **.c** file in our machine:  
-1. Open the bash terminal and locate to the directory where you want to create your file. Then run the following command:
+1. Open the terminal and access the leafpad file in which we code the c program. To open leapad run the following command:
 
 	```
-	gedit sum_1ton.c
+	leafpad sumn.c
 	```  
 2. This will open the editor and allows you to write into the file that you have created. You have to write the C code of printing the sum of n numbers. Once you are done with your code, press ```Ctrl + S``` to save your file, and then press ```Ctrl + W``` to close the editor.   
 3. To the C code on your terminal, run the following command:
 
 	```
-	gcc sum_1ton.c
+	gcc sumn.c
 	./a.out
 	```
-![C Code compiled on gcc Compiler](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/8ca03eec-c0cf-4a34-9c4b-2ff791a3b550)
+![C Code compiled on gcc Compiler](https://github.com/BRUTAL018/samsung-riscv/blob/main/1.png)
 
 ### RISCV based LAB
 We have to do the same compilation of our code but this time using RISCV gcc compiler. Follow the given steps:  
 1. Open the terminal and run the given command:  
 
 	```
-	cat sum_1ton.c
+	cat sumn.c
 	```
-![cat Command](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/a272d8d0-63e5-4f00-9899-2223402be21d)
+![cat Command](https://github.com/BRUTAL018/samsung-riscv/blob/main/2.png)
 
 2. Using the **cat** command, the entire C code will be displayed on the terminal. Now run the following command to compile the code in riscv64 gcc compiler:  
 
 	```
-	riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1ton.o sum_1ton.c
+	riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sumn.o sumn.c
 	```
 3. Open a new terminal and run the given command:    
 
 	```
-	riscv64-unknown-elf-objdump -d sum_1ton.o
+	riscv64-unknown-elf-objdump -d sumn.o
 	```
-![Objdump using -O1 format](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/dbf50220-d897-4b69-b33d-d0201fddb4fb)
+![Objdump using -O1 format](https://github.com/BRUTAL018/samsung-riscv/blob/main/3.png)
 
 4. The Assembly Language code of our C code will be displayed on the terminal. Type ```/main``` to locate the main section of our code.  
 
