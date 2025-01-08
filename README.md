@@ -24,7 +24,7 @@ We have to follow the given steps to compile any **.c** file in our machine:
 	gcc sumn.c
 	./a.out
 	```
-![C Code compiled on gcc Compiler](https://github.com/BRUTAL018/samsung-riscv/blob/main/1.png)
+![C Code compiled on gcc Compiler](https://github.com/BRUTAL018/samsung-riscv/blob/main/task1/1.png)
 
 ### RISCV based LAB
 We have to do the same compilation of our code but this time using RISCV gcc compiler. Follow the given steps:  
@@ -33,7 +33,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 	```
 	cat sumn.c
 	```
-![cat Command](https://github.com/BRUTAL018/samsung-riscv/blob/main/2.png)
+![cat Command](https://github.com/BRUTAL018/samsung-riscv/blob/main/task1/2.png)
 
 2. Using the **cat** command, the entire C code will be displayed on the terminal. Now run the following command to compile the code in riscv64 gcc compiler:  
 
@@ -45,7 +45,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 	```
 	riscv64-unknown-elf-objdump -d sumn.o
 	```
-![Objdump using -O1 format](https://github.com/BRUTAL018/samsung-riscv/blob/main/3.png)
+![Objdump using -O1 format](https://github.com/BRUTAL018/samsung-riscv/blob/main/task1/3.png)
 
 4. The Assembly Language code of our C code will be displayed on the terminal. Type ```/main``` to locate the main section of our code.  
 
