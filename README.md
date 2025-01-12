@@ -6,7 +6,7 @@ this program is based on RISC-V architecture and uses open source tools to teach
 **Email ID:** yashasksy@gmail.com <br>
 **GitHub Profile:** [BRUTAL018](https://github.com/BRUTAL018) <br>  
 
-----------------------------------------------------------------------------------------------------------------
+-------------------------------------------------
 <details>
 <summary><b>Task 1:</b> Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler</summary>
 
@@ -64,3 +64,53 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 
 Here, the term **more aggressive optimization** in the context of compilers like GCC refers to a deeper and more complex set of transformations applied to the code in order to improve its performance and possibly reduce its size. The compiler uses more complex techniques that aims to generate faster executing code or code that occupies less memory. However, these optimizations typically increase the compilation time and can sometimes introduce bugs, making it harder to debug.
 </details>
+
+-------------------------------------------------
+<details>
+<summary><b>Task 2:</b> Performing SPIKE Simulation and Debugging the C code </summary> 
+
+### What is SPIKE in RISCV?
+> * A RISC-V ISA is a simulator, enabling the testing and analysis of RISC-V programs without the need for actual hardware.  
+> * Spike is a free, open-source C++ simulator for the RISC-V ISA that models a RISC-V core and cache system. It can be used to run programs and a Linux kernel, and can be a starting point for running software on a RISC-V target.  
+  
+### What is pk (Proxy Kernel)?  
+> * The RISC-V Proxy Kernel, pk , is a lightweight application execution environment that can host statically-linked RISC-V ELF binaries.  
+> * A Proxy Kernel in the RISC-V ecosystem simplifies the interaction between complex hardware and the software running on it, making it easier to manage, test, and develop software and hardware projects.  
+
+
+### Testing the SPIKE Simulator  
+The target is to run the ```sumn.c``` code using both ```gcc compiler``` and ```riscv compiler```, and both of the compiler must display the same output on the terminal. So to compile the code using **gcc compiler**, use the following command:  
+```
+gcc sumn.c  
+./a.out
+```
+And to compile the code using **riscv compiler**, use the following command:  
+```
+spike pk sumn.o
+```  
+![Spike Simulation](https://github.com/BRUTAL018/samsung-riscv/blob/main/task2/2.11.png)
+
+#### Following are the snapshots of RISCV Objdump with **-O1** and **-Ofast** options  
+RISCV Objdump with -O1 option  
+
+![Objdump in -O1](https://github.com/BRUTAL018/samsung-riscv/blob/main/task2/2.3o.png)
+
+RISCV Objdump with -Ofast option  
+
+![Objdump in -Ofast](https://github.com/BRUTAL018/samsung-riscv/blob/main/task2/2.2ofast.png)
+
+### Debugging the Assembly Language Program of  ```sumn.c```  
+* Open the **Objdump** of code by using the following command  
+```
+$ riscv64-unknown-elf-objdump -d sumn.o | less  
+```
+* Open the debugger in another terminal by using the following command  
+```
+$ spike -d pk sumn.o
+```
+* The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
+
+![Debugging](https://github.com/BRUTAL018/samsung-riscv/blob/main/task2/2.4.png) 
+</details>
+
+-------------------------------------------------
