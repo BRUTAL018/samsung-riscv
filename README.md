@@ -343,3 +343,114 @@ $ spike -d pk sumn.o
          0 0001000000 1 00101011 | 00001 | 1101111
         ```
         </details>
+--------
+<details>
+<summary><b>Task 4:</b> To perform an experiment of Functional Simulation and observe the waveforms of the instructions with the help of RISCV CORE, Netlist and Testbench. </summary>
+	
+### About iverilog and gtkwave
+- Icarus Verilog is an implementation of the Verilog hardware description language.
+- GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing.
+---
+
+### Installing iverilog and gtkwave
+
+- **For Ubuntu**
+ 1. Open your terminal and type the following to install iverilog and GTKWave
+ ```
+ $   sudo apt update
+ $   sudo apt install iverilog gtkwave
+ ```
+2. Create a new directory with your name ```mkdir <your_name>```
+3. Create two files by using ```touch``` command as ```chethas_rv32i.v``` and ```chethas_rv32i_tb.v```  
+4. Copy the code from the [FILE](https://github.com/Chethas01/SAMSUNG-RISC-V-INTERNSHIP/tree/main/Task%204/Code) and paste it in your verilog netlist and testbench files 
+  
+  
+5. To run and simulate the verilog code, enter the following command:  
+	```
+	$ iverilog -o chethas_rv32i.out chethas_rv32i_tb.v chethas_rv32i_tb.v
+	$ vvp chethas_rv32i.out
+	```
+6. To see the output simulation waveform in GTKWave, enter the name of dump file in the command:
+	```
+	$ gtkwave iiitb_rv32i.vcd
+	```
+ 
+ ---
+
+ 
+#### All the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-3 will not match with the given instruction.  
+  
+<img width="500" alt="Instructions" src="https://github.com/Chethas01/SAMSUNG-RISC-V-INTERNSHIP/blob/main/Task%204/Waveforms/Instructions%20list.png">
+
+  
+#### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
+
+|  **Operation**  |  **Standard RISCV ISA**  |  **Hardcoded ISA**  |  
+|  :----:  |  :----:  |  :----:  |  
+|  ADD R6, R2, R1  |  32'h00110333  |  32'h02208300  |  
+|  SUB R7, R1, R2  |  32'h402083b3  |  32'h02209380  |  
+|  AND R8, R1, R3  |  32'h0030f433  |  32'h0230a400  |  
+|  OR R9, R2, R5  |  32'h005164b3  |  32'h02513480  |  
+|  XOR R10, R1, R4  |  32'h0040c533  |  32'h0240c500  |  
+|  SLT R1, R2, R4  |  32'h0045a0b3  |  32'h02415580  |  
+|  ADDI R12, R4, 5  |  32'h004120b3  |  32'h00520600  |  
+|  BEQ R0, R0, 15  |  32'h00000f63  |  32'h00f00002  |  
+|  SW R3, R1, 2  |  32'h0030a123  |  32'h00209181  |  
+|  LW R13, R1, 2  |  32'h0020a683  |  32'h00208681  |  
+|  SRL R16, R14, R2  |  32'h0030a123  |  32'h00271803  |
+|  SLL R15, R1, R2  |  32'h002097b3  |  32'h00208783  |  
+
+  ---
+  
+## *Analysing the Output Waveform of various instructions that we have covered in TASK-3*  
+**```Instruction 1: ADD R6, R2, R1```**  
+
+![ADD]()
+
+**```Instruction 2: SUB R7, R1, R2```**  
+  
+![SUB]()
+
+**```Instruction 3: AND R8, R1, R3```**  
+
+![AND]()
+
+**```Instruction 4: OR R9, R2, R5```**  
+
+![OR]()
+
+**```Instruction 5: XOR R10, R1, R4```**  
+
+![XOR]()
+
+**```Instruction 6: SLT R1, R2, R4```**  
+
+![SLT]()
+
+**```Instruction 7: ADDI R12, R4, 5```**  
+
+![ADDI]()
+
+**```Instruction 8: BEQ R0, R0, 15```**  
+  
+![BEQ]()
+ 
+**```Instruction 9: SW R3, R1, 2```**
+
+![sw]()
+  
+**```Instruction 10: LW R13, R1, 2```**  
+
+![lw]()
+
+
+
+
+
+
+
+
+
+
+ 
+</details>
