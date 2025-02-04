@@ -361,13 +361,13 @@ $ spike -d pk sumn.o
  $   sudo apt install iverilog gtkwave
  ```
 2. Create a new directory with your name ```mkdir <your_name>```
-3. Create two files by using ```touch``` command as ```chethas_rv32i.v``` and ```chethas_rv32i_tb.v```  
+3. Create two files by using ```touch``` command as ```yashasbr_rv32i.v``` and ```yashasbr_rv32i_tb.v```  
 4. Copy the code from the [FILE](https://github.com/Chethas01/SAMSUNG-RISC-V-INTERNSHIP/tree/main/Task%204/Code) and paste it in your verilog netlist and testbench files 
   
   
 5. To run and simulate the verilog code, enter the following command:  
 	```
-	$ iverilog -o chethas_rv32i.out chethas_rv32i_tb.v chethas_rv32i_tb.v
+	$ iverilog -o chethas_rv32i.out yashasbr_rv32i_tb.v yashasbr_rv32i_tb.v
 	$ vvp chethas_rv32i.out
 	```
 6. To see the output simulation waveform in GTKWave, enter the name of dump file in the command:
