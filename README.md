@@ -405,43 +405,51 @@ $ spike -d pk sumn.o
 ## *Analysing the Output Waveform of various instructions that we have covered in TASK-3*  
 **```Instruction 1: ADD R6, R2, R1```**  
 
-![ADD]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/ADD_R6%2CR2%2CR1.png)
 
 **```Instruction 2: SUB R7, R1, R2```**  
   
-![SUB]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/SUB_R7%2CR1%2CR2.jpg)
 
 **```Instruction 3: AND R8, R1, R3```**  
 
-![AND]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/AND_R8%2CR1%2CR3.png)
 
-**```Instruction 4: OR R9, R2, R5```**  
 
-![OR]()
+**```Instruction 4: BNE R0, R0, R15```**  
+
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/BNE_R0%2CR0%2C15.png)
+
 
 **```Instruction 5: XOR R10, R1, R4```**  
 
-![XOR]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/XOR_R10%2CR1%2CR4.jpg)
+
 
 **```Instruction 6: SLT R1, R2, R4```**  
 
-![SLT]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/SLT_R1%2CR2%2CR4.jpg)
+
 
 **```Instruction 7: ADDI R12, R4, 5```**  
 
-![ADDI]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/ADDI_R12%2CR4%2C5.png)
+
 
 **```Instruction 8: BEQ R0, R0, 15```**  
   
-![BEQ]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/BEQ_R0%2CR0%2C15.png)
+
  
 **```Instruction 9: SW R3, R1, 2```**
 
-![sw]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/SW_R3%2CR1%2C2.jpg)
+
   
 **```Instruction 10: LW R13, R1, 2```**  
 
-![lw]()
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/snapshots/LW_R13%2CR1%2C2.jpg)
+
 
 
 
