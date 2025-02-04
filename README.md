@@ -362,7 +362,7 @@ $ spike -d pk sumn.o
  ```
 2. Create a new directory with your name ```mkdir <your_name>```
 3. Create two files by using ```touch``` command as ```yashasbr_rv32i.v``` and ```yashasbr_rv32i_tb.v```  
-4. Copy the code from the [FILE](https://github.com/Chethas01/SAMSUNG-RISC-V-INTERNSHIP/tree/main/Task%204/Code) and paste it in your verilog netlist and testbench files 
+4. Copy the code from the [FILE](https://github.com/vinayrayapati/rv32i) and paste it in your verilog netlist and testbench files 
   
   
 5. To run and simulate the verilog code, enter the following command:  
@@ -380,7 +380,7 @@ $ spike -d pk sumn.o
  
 #### All the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-3 will not match with the given instruction.  
   
-<img width="500" alt="Instructions" src="https://github.com/Chethas01/SAMSUNG-RISC-V-INTERNSHIP/blob/main/Task%204/Waveforms/Instructions%20list.png">
+<img width="500" alt="Instructions" src="https://github.com/BRUTAL018/samsung-riscv/blob/main/task4/stdarchitecture/Instructions%20list.png">
 
   
 #### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
