@@ -481,6 +481,8 @@ LED CONNECTION
 *LED Anode Pin connected to PD6 Of VSDSquadron Mini Board.
 *LED Cathode connected to GND Of VSDSquadron Mini Board.
 
+![image](https://github.com/BRUTAL018/samsung-riscv/blob/main/task5/Motion-Detection.png)
+
 ### **code**
 ```
 #include <ch32v00x.h>
@@ -532,7 +534,17 @@ void NMI_Handler(void) {}
 void HardFault_Handler(void)
 {
     while (1)
+
+
     {
     }
 }
 ```
+ </details>
+ 
+-------
+<details>
+<summary><b>Task 6: </b>Final Code Submission & Application Demo. </summary>
+
+[Video Link](https://github.com/BRUTAL018/samsung-riscv/blob/main/task5/WhatsApp%20Video%202025-02-17%20at%209.37.25%20PM.mp4)
+
