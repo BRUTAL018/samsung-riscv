@@ -546,5 +546,5 @@ void HardFault_Handler(void)
 <details>
 <summary><b>Task 6: </b>Final Code Submission & Application Demo. </summary>
 
-[Video Link](https://github.com/BRUTAL018/samsung-riscv/blob/main/task5/WhatsApp%20Video%202025-02-17%20at%209.37.25%20PM.mp4)
+[Video Link](https://drive.google.com/file/d/15HcZdmZeK-sS0wujO-68gnyD08PaqZSe/view?usp=drive_link)
 
